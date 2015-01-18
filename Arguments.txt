@@ -95,4 +95,34 @@ Variables and consts...
 		. s[:m] a string from 0 to m-1
 		. string(i) convert and integere to a string
 		. strings support the usual comparison operators (<, <=, ==,!=, >, >=)
+		. Examples of strings package functions : strings.go
+		. For sstrings conversions use the strconv package
+		. For advanced string operations use the regexp package
+		. Examples of fmt package formatting : fmt.go
 		. 
+
+	. Values, Pointers and References
+		. Go’s pointers work just like those in C and C++
+		. Nor does Go need free() or delete since Go has a garbage collector
+		  and manages memory automatically
+		. Variables normally stores values except for
+			. variables that refer to channels, functions, methods, maps and
+			  slices that holde references
+			. variables taht hold pointers
+		. Remember that variables are passed to function by value, so it is copied.
+		  Arrays are passed by value so in most case can be expensive
+		. A pointer is a variable that holds another variable’s memory address
+			. A variable pointed to by a pointer can be modified through the pointer 
+			. Pointers are cheap to pass (8 bytes on 64-bit machines, 4 bytes on
+			   32-bit machines)
+			. pointed-to variables persist in memory for the entire scope
+			. * operator is oveloaded to define a pointer
+			. & operator is overloaded to de-reference a pointer
+			. pointers.go
+			. pointersSwap.go
+		. we can define structure types using the struct keyword
+			. struct.go
+
+	. Collection types
+		. 
+
