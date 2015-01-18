@@ -124,5 +124,16 @@ Variables and consts...
 			. struct.go
 
 	. Collection types
-		. 
+		. Array
+			. A Go array is a fixed-length sequence of items of the same type
+			. Array items are indexed using the [] index operator by their 0-based position
+			. array.go
+			. Array are alway passed by value to a function so it is copied
+			. It is better to create a slice over an array
+				. make([]Type, len, cap)
+				. array1.go
+				. a[n], a[:m], a[n:], a[n:m], len(s), cap(a)
 
+		. A slice is a reference to a hidden array
+			. When we change the data of a slice, the original data is changed
+			. slice.go
