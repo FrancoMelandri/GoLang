@@ -1,0 +1,98 @@
+GO
+Brief introduction to GO programming language
+
+Why...
+I like
+	. Sintax
+	. Funcitonal
+	. Object Oriented
+	. Concurrent programming model
+
+History...
+	. The Go programming language began as an internal Google project in 2007
+	. By Robert Griesemer, Rob Pike and Ken Thompson
+	. On November 10, 2009, Go was publicly unveiled under a liberal open source license
+
+Advantages...
+	. Go is designed to scale efficiently so...
+	. Can be used to build very big applications
+	. Lightning-fast compilation speed is made possible
+		. because the language is easy to parse
+		. because of its dependency management
+	. Garbage collector
+	. Concuurrency using a CSP (Communicating Sequential Processes) model 
+	  allows concurrent Go programs don't nedd to do any lock
+
+Links...
+	. http://golang.org
+	. https://github.com/golang
+
+First of all...
+	. Install the GO compiler
+	. Allows you to run in memory application
+	. Allows you to build application anc launch it
+
+
+Hello world...
+	. hello.go
+	. Program in go is made up of packages
+	. Program start running main package at main function
+	. You can import other packages using the import keyword
+	. hello1.go
+	
+Variables and consts...
+	. vars.go
+	**** remember BitFlag sample
+	. boolean types
+		. !b
+		. a || b
+		. a && b
+		. x < y
+		. x <= y
+		. x == y
+		. x != y
+		. x >= y
+		. x > y
+
+	. Integer types
+		. byte
+		. int
+		. int8
+		. int16
+		. int32
+		. int64
+		. rune (int32)
+		. uint
+		. uint8
+		. uint16
+		. uint32
+		. uint64
+		. uintptr (capable to store a pointer)
+
+		. integer supports all the normal operations plus the bitwise operations
+			. x &= y (bitwise and)
+			. x |= y (bitwise or)
+			. x ^= y (bitwise xor)
+			. x >>= u (shift right like mult * 2)
+			. x <<= u (shift left like div * 2)
+			. ecc..
+
+	. Floating point types
+		. float32
+		. float64
+
+	. Complex types
+		. complex32
+		. complex64
+
+	. String types
+		. Go string is a sequence of variable-width characters where each character 
+		  is represented by one or more bytes, normally using the UTF-8 encoding
+		. + concatenation
+		. s[n] raw byte at n position
+		. s[n:m] a string from n to m-1 position
+		. s[n:] a string from n to last position
+		. s[:m] a string from 0 to m-1
+		. string(i) convert and integere to a string
+		. strings support the usual comparison operators (<, <=, ==,!=, >, >=)
+		. 
