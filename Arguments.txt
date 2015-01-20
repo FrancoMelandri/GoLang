@@ -137,3 +137,12 @@ Variables and consts...
 		. A slice is a reference to a hidden array
 			. When we change the data of a slice, the original data is changed
 			. slice.go
+		
+		. Using the range keyword we can iterate the slice
+			. iterate.go
+
+		. Insert and append slices
+			. append.go
+
+		. Sort and searching slices
+			. sort.go
