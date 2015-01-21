@@ -146,3 +146,65 @@ Variables and consts...
 
 		. Sort and searching slices
 			. sort.go
+
+		. Maps
+			. A Go map is an unordered collection of key–value
+			. Keys are unique and may only be of a type that
+			  sensibly supports the == and !=
+			. A map’s keys must all be of the same type
+			. Maps are reference types
+			. maps.go
+			. buil-in make function is used to create map, sloce and channels
+
+Procedural programming...
+	. Go can be used to write purely procedural programs,
+	. Go can be used to write object-oriented programs
+	. Go can be used to write programs that combine both paradigms
+
+	. Go’s syntax requires the use of semicolons as statement terminators
+	. In effect very few semicolons are nedded becouse the compiler
+	  insert it automatically; it is very important the indentation,
+	  the new line and the open brace
+	. procedural.go
+
+	. Barnching
+		. If
+			if optionalStatement1; booleanExpression1 {
+				block1
+			} else if optionalStatement2; booleanExpression2 {
+				block2
+			} else {
+				block3
+			}	
+
+			. The braces are mandatory
+			. Semicolon is needed only if an optional statement is present
+
+		. Switch
+			switch optionalStatement; optionalExpression {
+				case expressionList1: block1
+				...
+				case expressionListN: blockN
+				default: blockD		
+			}
+
+			. the optiona statement is optional; if exists semicolon is needed
+			. default block is optional
+			. Each case must have an expression list of one or more comma-separated
+			. we can define a case block with a fallthrough to pass to the next
+
+		. select
+
+	. Looping with for
+
+			for optionalPreStatement; booleanExpression; optionalPostStatement {
+				block
+			}
+
+			. The braces are mandatory
+			. semicolon is only needed if optional pre-post is used
+			. we could use labels to break or continue a loop
+			. for.go
+
+	. Defer, panic and recover
+		. 
