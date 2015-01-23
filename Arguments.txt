@@ -207,4 +207,32 @@ Procedural programming...
 			. for.go
 
 	. Defer, panic and recover
+		. defer.go
+		. defer is used to defer the execution of a function after the return
+		. if more then one defer statement is used, they are executed in LIFO
+		. panic and recover provides exception handling
+			. panic is used to raise exception
+			. calling panic the execution of the enclosing function or method stops immediately
+			. any defferd function are called
+			. with recover we handling the exception
+			. panic.go
+
+	. Functions
+
+		func functionName(optionalParameters) (optionalReturnValues) {
+			body
+		}
+
+		. where parameters: params1 type1, ..., paramsN typeN
+		. for variadic functions use the elippse ...
+		. function could return more then one value
+		. Go reserve two function names 
+			. main() entry point present only in the main package
+			. init() present in all packages and called at the initialization
+
+	. Closures
+		. closure.go
+		. A closure is a function which “captures” any constants and variables that are
+		  present in the same scope where it is created
+		. In Go, every anonymous function (function literal) is a closure
 		. 
