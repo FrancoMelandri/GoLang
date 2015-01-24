@@ -49,10 +49,12 @@ func DoExchangeAll(exchangers ...Exchanger) {
 func main() {
 	sp := StringPair{"first", "second"}
 	ip := IntPair{1, 2}
+
 	DoExchange(&sp)
 	DoExchange(&ip)
 	fmt.Println("SP: ", sp)
 	fmt.Println("IP: ", ip)
+
 	DoExchangeAll(&sp, &ip)
 	fmt.Println("SP: ", sp)
 	fmt.Println("IP: ", ip)

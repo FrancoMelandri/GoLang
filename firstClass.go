@@ -7,6 +7,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func myFunc(val int) {
@@ -18,5 +19,9 @@ func main() {
 	defer func() {
 		f(10)
 	}()
+	go func() {
+		f(30)
+	}()
 	myFunc(20)
+	//time.Sleep(1)
 }

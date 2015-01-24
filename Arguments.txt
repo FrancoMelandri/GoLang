@@ -86,8 +86,7 @@ Variables and consts...
 		. complex64
 
 	. String types
-		. Go string is a sequence of variable-width characters where each character 
-		  is represented by one or more bytes, normally using the UTF-8 encoding
+		. Go string is a sequence of variable-width characters where each character is represented by one or more bytes, normally using the UTF-8 encoding
 		. + concatenation
 		. s[n] raw byte at n position
 		. s[n:m] a string from n to m-1 position
@@ -98,8 +97,7 @@ Variables and consts...
 		. Examples of strings package functions : strings.go
 		. For sstrings conversions use the strconv package
 		. For advanced string operations use the regexp package
-		. Examples of fmt package formatting : fmt.go
-		. 
+		. Examples of fmt package formatting : fmt.go	
 
 	. Values, Pointers and References
 		. Go’s pointers work just like those in C and C++
@@ -113,8 +111,7 @@ Variables and consts...
 		  Arrays are passed by value so in most case can be expensive
 		. A pointer is a variable that holds another variable’s memory address
 			. A variable pointed to by a pointer can be modified through the pointer 
-			. Pointers are cheap to pass (8 bytes on 64-bit machines, 4 bytes on
-			   32-bit machines)
+			. Pointers are cheap to pass (8 bytes on 64-bit machines, 4 bytes on 32-bit machines)
 			. pointed-to variables persist in memory for the entire scope
 			. * operator is oveloaded to define a pointer
 			. & operator is overloaded to de-reference a pointer
@@ -149,8 +146,7 @@ Variables and consts...
 
 		. Maps
 			. A Go map is an unordered collection of key–value
-			. Keys are unique and may only be of a type that
-			  sensibly supports the == and !=
+			. Keys are unique and may only be of a type that sensibly supports the == and !=
 			. A map’s keys must all be of the same type
 			. Maps are reference types
 			. maps.go
@@ -162,9 +158,7 @@ Procedural programming...
 	. Go can be used to write programs that combine both paradigms
 
 	. Go’s syntax requires the use of semicolons as statement terminators
-	. In effect very few semicolons are nedded becouse the compiler
-	  insert it automatically; it is very important the indentation,
-	  the new line and the open brace
+	. In effect very few semicolons are nedded becouse the compilerinsert it automatically; it is very important the indentation, the new line and the open brace
 	. procedural.go
 
 	. Barnching
@@ -230,9 +224,53 @@ Procedural programming...
 			. main() entry point present only in the main package
 			. init() present in all packages and called at the initialization
 
-	. Closures
-		. closure.go
-		. A closure is a function which “captures” any constants and variables that are
-		  present in the same scope where it is created
-		. In Go, every anonymous function (function literal) is a closure
-		. 
+		. Closures
+			. closure.go
+			. A closure is a function which “captures” any constants and variables that are present in the same scope where it is created
+			. In Go, every anonymous function (function literal) is a closure
+		
+		. Recursive
+			. A function that calls itself
+			. fibonacci.go
+
+		. Dynamic function
+			. Since Go functions are first-class values it is possible to store them in variables
+			. firstClass.go
+			. dynFunc.go
+			. Just to complete, Go supports High order functions
+			. is a function that takes one or more other functions as arguments
+			. highOrder.go
+
+		. Generic function
+			. In Go does not exists generics or template
+			. We can use the type interface{} to generalize the parameters
+			. generics.go
+
+Object-Oriented programming...
+	. Object oriented is so different from C++, Java, ecc.
+	. It does not support inheritance
+	. Go supports only aggregation (composition) and embedding
+	. Another aspecct is that interface and methods are kept separate (there is no connection between custom type's method and any interface)
+
+	. Custom types
+
+		 type typeName typeSpecification
+
+		 . type specification could be each build-in types or struct
+		 . We can add methods to custom types adding a special kind of function on a value of a custom type
+		 The sintax for defining method is almost identical to that for defining function except taht between func keyword and the name we must write the receiver
+		 	. types.go
+		 . We can ovveride methods in embedded object
+		 	. call of methods defined in type and not in the parent type
+		 	. embedded.go
+
+		 . Interfaces
+		 	. In Go an interface is a custom type that specifies a set of one or more method signature
+		 	. Interfaces are wholly abstract, so it is not possible to instantiate an interface
+		 	. The interface{} type is the interface that specifies the empty set of methods
+		 	. Every value satisfies the interface{}
+		 	. interface.go
+
+		 . Structs
+		 	. Custom types can be based on structs which are used to aggregate and embed values together
+		 	. Structs support embedding
