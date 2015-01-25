@@ -20,18 +20,17 @@ Advantages...
 		. because the language is easy to parse
 		. because of its dependency management
 	. Garbage collector
-	. Concuurrency using a CSP (Communicating Sequential Processes) model 
-	  allows concurrent Go programs don't nedd to do any lock
+	. Concuurrency using a CSP (Communicating Sequential Processes) by C. A. R. Hoare model allows concurrent Go programs don't nedd to do any lock
 
 Links...
 	. http://golang.org
 	. https://github.com/golang
+	. http://www.usingcsp.com
 
 First of all...
 	. Install the GO compiler
 	. Allows you to run in memory application
-	. Allows you to build application anc launch it
-
+	. Allows you to build application and launch it
 
 Hello world...
 	. hello.go
@@ -273,4 +272,23 @@ Object-Oriented programming...
 
 		 . Structs
 		 	. Custom types can be based on structs which are used to aggregate and embed values together
+		 	. embedded.go
 		 	. Structs support embedding
+			 	. Embedd when specify only the type			 
+			 	. Aggregating specifying the field name too
+			. Every field name in a struct must be unique
+			. It also possible to aggregate and embed interfaces; in this case the filed can store any values that satisfies the interface's specification
+			. embinterface.go
+
+Concurrent programming...
+	. Concurrent programming is quite different from parallel programming
+		. Concurency is the composition of independently executing processes
+			. dealing lots of thing at once
+		. Parallelism is the simultaneous execution of computations
+			. doing lots of thing at once
+	
+	. 1) Go provides high-level support for concurrent programming yhat makes it much easier
+	. 2) Concurrent processing is done in goroutines that are much more lightweight than threads
+	. 3) Automatic garbage collection manage memory for you
+
+	. Go’s built-in high-level API for writing concurrent programs is based on CSP

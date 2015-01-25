@@ -11,8 +11,9 @@ type Item struct {
 }
 
 type SpecialItem struct {
-	Item     // embedding
-	id   int // aggeegation
+	Item       // embedding
+	item *Item // aggregation
+	id   int   // aggeegation
 }
 
 func (item *Item) Cost() int {
@@ -22,9 +23,14 @@ func (item *Item) Cost() int {
 func main() {
 
 	// object createion
-	i := SpecialItem{Item{"item1", 3, 5}, 1}
+	i := SpecialItem{Item{"item1", 3, 5}, &Item{"item2", 3, 3}, 1}
 
-	fmt.Println("Hello embedding", i)
+	fmt.Println("Hello embedding and aggregating", i)
 
 	fmt.Println("Hello embedding", i.Cost())
+	fmt.Println("Hello aggregating", i.item.Cost())
+
+	fmt.Println("Hello embedding", i.Item.Name)
+	fmt.Println("Hello aggregating", i.item.Name)
+
 }
