@@ -4,7 +4,7 @@ Brief introduction to GO programming language
 Why...
 I like
 	. Sintax
-	. Funcitonal
+	. Functional
 	. Object Oriented
 	. Concurrent programming model
 
@@ -33,10 +33,10 @@ First of all...
 	. Allows you to build application and launch it
 
 Hello world...
-	. hello.go
 	. Program in go is made up of packages
 	. Program start running main package at main function
 	. You can import other packages using the import keyword
+	. hello.go
 	. hello1.go
 	
 Variables and consts...
