@@ -292,3 +292,17 @@ Concurrent programming...
 	. 3) Automatic garbage collection manage memory for you
 
 	. Go’s built-in high-level API for writing concurrent programs is based on CSP
+	. This means that explicit locking can be avoided, with synchronization achieved by sending and receiving data via thread-safe channels
+
+	. Concurrent programming in Go means go routines and channels
+
+	. Go also provides the same low-level functionality as other languages provide in a specific package called sync and atomic, but they are not intended for use by application programmers
+
+	. go routines is a function that can be concurrent executed
+	. Channels provide a lock-free means of communication between concurrently running goroutines
+	. When a channel communication takes place at the moment of communication the sending and receiving channels are synchronized
+	. Channels are bidirectional; we can send values into them and we can receive values from them
+	. Sending values through channels is intrinsically safe since these are copied
+	. Sending pointers or references through channels is not intrinsically safe
+	. concurrent.go
+	. jobs.go
