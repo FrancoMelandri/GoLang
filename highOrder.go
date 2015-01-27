@@ -24,4 +24,10 @@ func main() {
 		fmt.Println("func2")
 		return false
 	})
+
+	f := func() bool {
+		fmt.Println("func3")
+		return true
+	}
+	myFunc(f)
 }

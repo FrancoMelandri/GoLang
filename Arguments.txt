@@ -94,7 +94,7 @@ Variables and consts...
 		. string(i) convert and integere to a string
 		. strings support the usual comparison operators (<, <=, ==,!=, >, >=)
 		. Examples of strings package functions : strings.go
-		. For sstrings conversions use the strconv package
+		. For strings conversions use the strconv package
 		. For advanced string operations use the regexp package
 		. Examples of fmt package formatting : fmt.go	
 
@@ -103,16 +103,14 @@ Variables and consts...
 		. Nor does Go need free() or delete since Go has a garbage collector
 		  and manages memory automatically
 		. Variables normally stores values except for
-			. variables that refer to channels, functions, methods, maps and
-			  slices that holde references
-			. variables taht hold pointers
-		. Remember that variables are passed to function by value, so it is copied.
-		  Arrays are passed by value so in most case can be expensive
+			. variables that refer to channels, functions, methods, maps and slices that holds references
+			. variables that hold pointers
+		. Remember that variables are passed to function by value, so it is copied. Arrays are passed by value so in most case can be expensive
 		. A pointer is a variable that holds another variable’s memory address
 			. A variable pointed to by a pointer can be modified through the pointer 
 			. Pointers are cheap to pass (8 bytes on 64-bit machines, 4 bytes on 32-bit machines)
 			. pointed-to variables persist in memory for the entire scope
-			. * operator is oveloaded to define a pointer
+			. * operator is overloaded to define a pointer
 			. & operator is overloaded to de-reference a pointer
 			. pointers.go
 			. pointersSwap.go
@@ -124,7 +122,7 @@ Variables and consts...
 			. A Go array is a fixed-length sequence of items of the same type
 			. Array items are indexed using the [] index operator by their 0-based position
 			. array.go
-			. Array are alway passed by value to a function so it is copied
+			. Array are always passed by value to a function so it is copied
 			. It is better to create a slice over an array
 				. make([]Type, len, cap)
 				. array1.go
@@ -132,6 +130,7 @@ Variables and consts...
 
 		. A slice is a reference to a hidden array
 			. When we change the data of a slice, the original data is changed
+			. slice variable is stored as reference
 			. slice.go
 		
 		. Using the range keyword we can iterate the slice
@@ -149,7 +148,7 @@ Variables and consts...
 			. A map’s keys must all be of the same type
 			. Maps are reference types
 			. maps.go
-			. buil-in make function is used to create map, sloce and channels
+			. buil-in make function is used to create map, slice and channels
 
 Procedural programming...
 	. Go can be used to write purely procedural programs,
@@ -157,7 +156,7 @@ Procedural programming...
 	. Go can be used to write programs that combine both paradigms
 
 	. Go’s syntax requires the use of semicolons as statement terminators
-	. In effect very few semicolons are nedded becouse the compilerinsert it automatically; it is very important the indentation, the new line and the open brace
+	. In effect very few semicolons are nedded becouse the compiler insert it automatically; it is very important the indentation, the new line and the open brace
 	. procedural.go
 
 	. Barnching

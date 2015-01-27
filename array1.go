@@ -8,5 +8,6 @@ func main() {
 
 	a1 := make([]int, 10, 20)
 	//a1 := []int{}
-	fmt.Println("Hello array 1", a1, len(a1), cap(a1))
+	s := fmt.Sprintf("%T", a1)
+	fmt.Println("Hello array 1", s, a1, len(a1), cap(a1))
 }

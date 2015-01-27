@@ -35,4 +35,10 @@ func main() {
 	// multiple value
 	fmt.Println(Swap(10, 2))
 	fmt.Println(Swap1(9, 5))
+
+	// anonymous function or literal
+	foo := func() {
+		fmt.Println("hello ")
+	}
+	foo()
 }

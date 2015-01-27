@@ -10,14 +10,14 @@ func main() {
 	sum := 0
 
 	// a is a copy of the item in the slice
-	for a := range arr {
+	for _, a := range arr {
 		sum += a
 	}
 	fmt.Println("Hello iteration ", sum)
 
 	// iterate a portion of the initial array
 	sum = 0
-	for a := range arr[:5] {
+	for _, a := range arr[:5] {
 		sum += a
 	}
 	fmt.Println("Hello iteration ", sum)

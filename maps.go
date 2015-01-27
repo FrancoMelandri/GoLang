@@ -18,7 +18,7 @@ func main() {
 	v1, found1 := map1["hello"]
 	fmt.Println("Hello maps ", v1, found1)
 
-	// sfae delete of a key value
+	// safe delete of a key value
 	delete(map1, "hello")
 	delete(map1, "hello")
 	fmt.Println("Hello maps ", map1)
