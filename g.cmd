@@ -1,1 +1,1 @@
-go run %1.go
+go run %1.go %2

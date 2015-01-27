@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-const JobsLen int = 100
+const JobsLen int = 100000
 const MaxTime int = 5
 const Verbose bool = false
 
