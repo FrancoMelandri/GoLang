@@ -280,6 +280,8 @@ Object-Oriented programming...
 			. embinterface.go
 
 Concurrent programming...
+	"Do not communicate by sharing memory; instead, share memory by communicating"
+
 	. Concurrent programming is quite different from parallel programming
 		. Concurency is the composition of independently executing processes
 			. dealing lots of thing at once
@@ -305,3 +307,6 @@ Concurrent programming...
 	. Sending pointers or references through channels is not intrinsically safe
 	. concurrent.go
 	. jobs.go
+
+	*****************************************************
+	Remeber the select
