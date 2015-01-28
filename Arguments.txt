@@ -288,7 +288,7 @@ Concurrent programming...
 		. Parallelism is the simultaneous execution of computations
 			. doing lots of thing at once
 	
-	. 1) Go provides high-level support for concurrent programming yhat makes it much easier
+	. 1) Go provides high-level support for concurrent programming that makes it much easier
 	. 2) Concurrent processing is done in goroutines that are much more lightweight than threads
 	. 3) Automatic garbage collection manage memory for you
 
